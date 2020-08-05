@@ -133,7 +133,7 @@
 .teacher-item footer button:hover {
     background: var(--color-secondary-dark);
 }
-/* Configurando o desktop da página study */
+/* Configurando o desktop da página study*/
 
 @media (min-width: 700px) {
     #page-study #container {
@@ -192,7 +192,7 @@
 
     .teacher-item footer p strong {
         display: initial;
-        margin:left;
+        margin-left: 16px;
     }
 
     .teacher-item footer button {
