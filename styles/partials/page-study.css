@@ -1,49 +1,4 @@
-#page-study #container {
-    width: 100vw;
-    height: 100vh;
-}
-
-.page-header {
-    background-color: var(--color-primary);
-    display:flex;
-    flex-direction: column;
-}
-
-.page-header .top-bar-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.6rem 0;
-}
-
-.page-header .top-bar-container a {
-    height:3.2rem;
-    transition: opacity 0.2s;
-}
-
-.page-header .top-bar-container a:hover {
-    opacity: 0.6;
-}
-
-.page-header .top-bar-container img {
-    height:1.6rem ;
-}
-
-.page-header .header-content {
-    width: 90%;
-    margin: 3.2rem auto;
-    position: relative;
-}
-
-.page-header .header-content strong {
-
-    font: 700 3.6rem Archivo;
-    color: var(--color-title-in-primary);
-    line-height: 4.2rem;
-}
-
+/* Configuração personalizadas do formulário do study */
 #search-teachers {
     margin-top: 3.2rem;
 }
@@ -84,38 +39,15 @@
     color: var(--color-text-complement);
 }
 
-.select-block select,
-.input-block input {
-    width: 100%;
-    height: 5.6rem;
-    margin-top: 0.8rem;
-    border-radius: 0.8rem;
-    background: var(--color-input-background);
-    border: 1px solid var(--color-line-in-white);
-    outline: 0;
-    padding: 0 1.6rem;
-    font: 1.6rem Archivo;
-}
-
-.input-block {
-    position:relative;
-}
-
-.input-block:focus-within::after {
-    content: "";
-    width: calc(100% - 3.2rem);
-    height: 2px;
-    position: absolute;
-    left: 1.6rem;
-    background: var(--color-primary-light);
-    bottom: 0px;
-}
+/* Configuração da página main */
 
 #page-study main {
 
     margin: 3.2rem auto;
     width: 90%;
 }
+
+/* Configurando o perfil do professor da página study */
 
 .teacher-item {
     background-color: var(--color-box-base);
@@ -201,6 +133,7 @@
 .teacher-item footer button:hover {
     background: var(--color-secondary-dark);
 }
+/* Configurando o desktop da página study */
 
 @media (min-width: 700px) {
     #page-study #container {

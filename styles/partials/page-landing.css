@@ -1,11 +1,13 @@
+/* Cor do background da landing */
 #page-landing {
     background: var(--color-primary);
 }
+/* Container da landing */
 
 #page-landing #container {
     color: var(--color-text-in-primary);
 }
-
+/* Logo da landing */
 .logo-container img {
     height: 10rem;
     margin-bottom: 3.2rem; 
@@ -25,6 +27,8 @@
 .hero-image {
     width: 100%;
 }
+
+/* Buttons da landing */
 
 .buttons-container {
     display: flex;
@@ -83,6 +87,8 @@
 .total-connections img {
     margin-left: 0.8rem;
 }
+
+/* Configuração desktop da landing */
 
 @media (max-width: 699px) {
     :root {

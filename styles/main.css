@@ -1,3 +1,4 @@
+/* variáveis das cores e fonte do projeto */
 :root {
     --color-background: #F0F0F7;
     --color-primary-lighter: #9871F5;
@@ -53,6 +54,8 @@ textarea {
     max-width: 700px;
     margin: 3.2rem 0;
 }
+
+/* Padrão da fonte para o layout em desktop */
 
 @media (min-width: 700px){
     :root {
