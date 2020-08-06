@@ -21,6 +21,12 @@
     --color-small-info: #C1BCCC;
     font-size: 60%; /* controle das medidas rem */
 
+    /* darktheme */
+
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-headings: #6022f1;
+    --color-text: #333333;
 }
 
 * {
