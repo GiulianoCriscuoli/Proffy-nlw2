@@ -74,13 +74,27 @@ const study = (req, res) => {
 /* html do give-classes */
 
 const giveClasses = (req, res) => {
+    const data = req.query;
 
-    res.render("give-classes.html");
+// pega as chaves de data e tranforma em arrays
+
+    const isNotEmpty = Object.keys(data).length > 0;
+
+// adiciona um novo objeto para o proffys se o array não for verdadeiro
+
+    if(isNotEmpty) {
+
+        proffys.push(data);
+
+        return res.redirect("/study");
+
+    }
+
+    return res.render("give-classes.html",{subjects, weekdays});
 }
 
 const express = require('express');
 const app = express();
-
 
 /* configurando o nunjucks */
 
