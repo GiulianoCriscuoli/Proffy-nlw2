@@ -144,14 +144,14 @@ label:active:after {
 
 /* Configuração desktop da landing */
 
-@media (max-width: 699px) {
+@media (max-width: 1100px) {
     :root {
         font-size: 40%; /* modificar as medidas rem */
     }
     
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
     #page-landing #container {
         max-width: 1180px;
         display:grid;

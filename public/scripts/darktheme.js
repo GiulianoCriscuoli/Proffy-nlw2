@@ -6,6 +6,8 @@ window
 .getComputedStyle(element)
 .getPropertyValue(style);
 
+//cores iniciais
+
 const initialColors = {
 
     bg: getStyle(html, "--color-background"),
@@ -14,18 +16,24 @@ const initialColors = {
 
 }
 
+// cores a serem modificadas
+
 const darkMode = {
 
     bg: "#454851",
     colorPrimary: "#454851",
-    colorText: "#FCEFF9"
+    colorText: "#FFFFFF"
 
 }
+
+// transformando a chave na variável 
 
 const transformKey = key => 
 
     "--" + key.replace(/([A-Z])/, "-$1").toLowerCase();
 
+
+// Acessa as keys de cada obejto de cores, mapeia e setta uma nova key de cor
 
 const changeColors = (colors) => {
 
