@@ -2,32 +2,7 @@
 // Dados
 
 const proffys = [
-    {
-        name: "Diego Fernandes", 
-        avatar: "https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4", 
-        whatsapp: 985746372, 
-        bio: "Entusiasta das melhores tecnologias de química avançada. Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.",
-        subject: "química", 
-        cost: "20", 
-        weekday: [0
-        ], 
-        time_from: [720], 
-        time_to: [1020]
-    },
-
-    {
-        name: "Diega Fernandes", 
-        avatar: "https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4", 
-        whatsapp: 985746372, 
-        bio: "Entusiasta das melhores tecnologias de química avançada. Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.",
-        subject: "química", 
-        cost: "20", 
-        weekday: [0
-            ], 
-        time_from: [720], 
-        time_to: [1020]
-
-        }
+    
 ]
 
 const subjects = [
@@ -55,6 +30,14 @@ const weekdays = [
     "Sexta-feira",
     "Sábado",
 ]
+
+// acessando a chave de subject
+
+function getSubject(subjectNumber) {
+
+    position = +subjectNumber -1;
+    return subjects[position];
+}
 
 /* html da home */
 
@@ -84,8 +67,9 @@ const giveClasses = (req, res) => {
 
     if(isNotEmpty) {
 
-        proffys.push(data);
+        data.subject = getSubject(data.subject);
 
+        proffys.push(data);
         return res.redirect("/study");
 
     }
