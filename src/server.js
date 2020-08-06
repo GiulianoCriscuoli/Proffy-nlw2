@@ -1,3 +1,6 @@
+
+// Dados
+
 const proffys = [
     {
         name: "Diego Fernandes", 
@@ -27,6 +30,32 @@ const proffys = [
         }
 ]
 
+const subjects = [
+    
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química"
+
+]
+
+const weekdays = [
+    
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
+
 /* html da home */
 
 const landingPage = (req, res) => {
@@ -37,8 +66,9 @@ const landingPage = (req, res) => {
 /* html do study */
 
 const study = (req, res) => {
+    const filters = req.query;
 
-    res.render("study.html", {proffys});
+    res.render("study.html", {proffys, filters, subjects, weekdays});
 }
 
 /* html do give-classes */
