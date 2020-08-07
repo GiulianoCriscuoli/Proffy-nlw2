@@ -1,6 +1,6 @@
-# Projeto: Be The Hero
+# Projeto: Proffy
 
- ![](/public/images/gifs/darktheme.gif)
+ ![](gifs/darktheme.gif)
 
 # Descrição
 
