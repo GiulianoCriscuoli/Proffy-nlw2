@@ -8,23 +8,11 @@ window
 
 //cores iniciais
 
-const initialColors = {
-
-    bg: getStyle(html, "--color-background"),
-    colorPrimary: getStyle(html, "--color-primary"),
-    colorText: getStyle(html, "--color-text-in-primary")
-
-}
+const initialColors = { colorPrimary: getStyle(html, "--color-primary") }
 
 // cores a serem modificadas
 
-const darkMode = {
-
-    bg: "#454851",
-    colorPrimary: "#454851",
-    colorText: "#FFFFFF"
-
-}
+const darkMode = { colorPrimary: "#454851" }
 
 // transformando a chave na variável 
 

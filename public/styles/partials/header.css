@@ -27,6 +27,7 @@
 
 .page-header .top-bar-container a:hover {
     opacity: 0.6;
+    transform: translateX(-.4rem);
 }
 
 .page-header .top-bar-container > img {
