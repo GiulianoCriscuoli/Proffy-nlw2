@@ -4,7 +4,7 @@
 
 # Descrição
 
-Proffy é uma plataforma de ensino online, focada para quem quer estudar com professores particulares ou para que educadores se cadastrarem para dar aulas.Projeto feito na semana NLW#2, da empresa rocketseat.
+Proffy é uma plataforma de ensino online, focada para quem quer estudar com professores particulares ou para que educadores se cadastrarem para dar aulas. Projeto feito na semana NLW#2, da empresa rocketseat.
 
 
 # Tecnologias Utilizadas
@@ -15,6 +15,9 @@ Front-end
 2. Nunjucks
 3. Javascript
 
+Back-end
+
+1. Node.js
 
 # Executando o projeto
 
@@ -24,7 +27,7 @@ Front-end
 
 3 - npm install express.
 
-4 - npm run dev Para fazer o servidor funcionar.
+4 - npm run dev para fazer o servidor funcionar.
 
 5 - servidor na porta: localhost:5500
 
@@ -35,6 +38,11 @@ Front-end
 
 2 - npm install nunjucks
 
+# Novas funcionalidades
+
+1 - Dark mode
+
+2 - Limite de novos horários
 
 # Licença
 
