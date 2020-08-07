@@ -29,7 +29,13 @@ function cloneField() {
             
            
 
-        } 
+        }  else {
+
+            let warning = document.querySelector("#schedule-items #warning");
+
+            warning.style.display = 'block';
+            warninng.style.transform = 'scale(1)';
+        }
     }
 
 

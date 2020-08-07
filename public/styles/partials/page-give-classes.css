@@ -23,6 +23,15 @@
     padding:  0 2.4rem;
 }
 
+#schedule-items #warning {
+
+    color: crimson;
+    padding-top: .8rem;
+    padding-bottom: .8rem; 
+    font: bold 2rem Archivo;
+    display: none;
+}
+
 #page-give-classes fieldset legend {
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
