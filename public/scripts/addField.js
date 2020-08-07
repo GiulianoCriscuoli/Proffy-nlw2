@@ -3,26 +3,36 @@
 const addNewHour = document.querySelector("#add-time");
 addNewHour.addEventListener("click", cloneField);
 
-// Quando clicar no botão
+// contador de fields e limite de fields adicionados
+
+let i = 0;
+let limitFields = 9;
 
 // Executar uma ação
 function cloneField() {
 
-// Duplicar os campos
-const newFieldContainer = document.querySelector(".schedule-item").cloneNode(true);
+    validateFields();
 
-// Limpar os campos
+    function validateFields() {
+        if(i < limitFields) {
 
-const fields = newFieldContainer.querySelectorAll('input');
+            // Duplicar os campos
+            const newFieldContainer = document.querySelector(".schedule-item").cloneNode(true);
+            
+            // Colocar na página
+            const schedule = document.querySelector("#schedule-items");
+            schedule.appendChild(newFieldContainer);
+            i++;
+            // Limpar os campos
+            const fields = newFieldContainer.querySelectorAll('input');
+            fields.foreach(field => field.value ="");
+            
+           
 
-// Para cada item limpa os campos
+        } 
+    }
 
- fields.forEach(field => field.value = "");
 
-// Colocar na página
-
-const schedule = document.querySelector("#schedule-items");
-schedule.appendChild(newFieldContainer);
 
 }
 
