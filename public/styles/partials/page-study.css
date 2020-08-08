@@ -133,6 +133,15 @@
 .teacher-item footer button:hover {
     background: var(--color-secondary-dark);
 }
+
+#page-study main .no-results {
+
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+
+}
+
 /* Configurando o desktop da página study*/
 
 @media (min-width: 700px) {
