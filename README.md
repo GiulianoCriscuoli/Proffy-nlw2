@@ -18,6 +18,7 @@ Front-end
 Back-end
 
 1. Node.js
+2. Sqlite
 
 # Executando o projeto
 

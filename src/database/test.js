@@ -1,5 +1,6 @@
 const Database = require('./db');
-const createProffy = require('./createProffy')
+const createProffy = require('./createProffy');
+
 
 Database.then(async(db) => {
 
@@ -31,7 +32,10 @@ Database.then(async(db) => {
         }
     ]
 
-    // await createProffy(db, {proffyValue, classValue, classScheduleValues});
+    //await createProffy(db, {proffyValue, classValue, classScheduleValues});
+
+   //console.log(createProffy)
+    
 
 
     // consultar dados inseridos

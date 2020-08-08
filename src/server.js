@@ -2,7 +2,11 @@
 const express = require('express');
 const app = express();
 
-const {landingPage, study, giveClasses} = require('./pages')
+const {
+    landingPage, 
+    study,
+    giveClasses, 
+    saveClasses } = require('./pages')
 
 /* configurando o nunjucks */
 
@@ -19,11 +23,18 @@ nunjucks.configure('src/views', {
 
 app.use(express.static("public"));
 
+/* recebendo dados do body */
+
+app.use(express.urlencoded({ extended: true }))
+
 /* rotas */
 
 app.get('/', landingPage );
+
 app.get('/study', study);
+
 app.get('/give-classes', giveClasses);
+app.post('/save-classes', saveClasses);
 
 const PORT = app.listen(5500);
 

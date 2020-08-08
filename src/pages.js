@@ -1,6 +1,8 @@
 const Database = require('./database/db');
 
 const { subjects, weekdays, getSubject,  convertHours} = require('./utils/format');
+const createProffy = require('./database/createProffy');
+
 
 /* html da home */
 
@@ -49,6 +51,11 @@ const study = async(req, res) => {
 
         const proffys = await db.all(query);
 
+        proffys.map((proffy) => {
+            proffy.subject = getSubject(proffy.subject)
+
+        });
+
         return res.render("study.html", {proffys, filters, subjects, weekdays})
 
     } catch(err) {
@@ -62,24 +69,54 @@ const study = async(req, res) => {
 /* html do give-classes */
 
 const giveClasses = (req, res) => {
-    const data = req.query;
-
-// pega as chaves de data e tranforma em arrays
-
-    const isNotEmpty = Object.keys(data).length > 0;
-
-// adiciona um novo objeto para o proffys se o array não for verdadeiro
-
-    if(isNotEmpty) {
-
-        data.subject = getSubject(data.subject);
-
-        proffys.push(data);
-        return res.redirect("/study");
-
-    }
-
     return res.render("give-classes.html",{subjects, weekdays});
 }
 
-module.exports = {landingPage, study, giveClasses}
+const saveClasses = async(req, res) => {
+   
+
+    const proffyValue = {
+        name: req.body.name,
+        avatar: req.body.avatar,
+        whatsapp: req.body.whatsapp,
+        bio: req.body.bio
+    }
+
+    const classValue = {
+        subject: req.body.subject,
+        cost: req.body.cost
+    }
+
+    const classScheduleValues = req.body.weekday.map(
+        (weekday, index) => {
+
+            return {
+                weekday,
+                time_from: convertHours(req.body.time_from[index]),
+                time_to: convertHours(req.body.time_to[index])
+
+            }
+
+        })
+
+        try {
+
+            const db = await Database
+            await createProffy(db, {proffyValue, classValue, classScheduleValues});
+
+            let queryString ="?subject=" + req.body.subject;
+            queryString += "&weekday=" + req.body.weekday[0]
+            queryString += "&time=" + req.body.time_from[0]
+
+            return res.redirect("/study" + queryString);
+
+        } catch(err) {
+
+            console.log("Erro: ", err);
+        }
+
+
+
+}
+
+module.exports = {landingPage, study, giveClasses, saveClasses}
