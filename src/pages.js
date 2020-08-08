@@ -33,8 +33,8 @@ const study = async(req, res) => {
             FROM class_schedule
             WHERE class_schedule.class_id = classes.id
             AND class_schedule.weekday = ${filters.weekday}
-            AND class_schedule.time_from = ${timeToMinutes}
-            AND class_schedule.time_to = ${timeToMinutes}
+            AND class_schedule.time_from <= ${timeToMinutes}
+            AND class_schedule.time_to > ${timeToMinutes}
 
 
         )
@@ -94,9 +94,7 @@ const saveClasses = async(req, res) => {
                 weekday,
                 time_from: convertHours(req.body.time_from[index]),
                 time_to: convertHours(req.body.time_to[index])
-
             }
-
         })
 
         try {
@@ -108,6 +106,8 @@ const saveClasses = async(req, res) => {
             queryString += "&weekday=" + req.body.weekday[0]
             queryString += "&time=" + req.body.time_from[0]
 
+            
+
             return res.redirect("/study" + queryString);
 
         } catch(err) {
@@ -115,8 +115,12 @@ const saveClasses = async(req, res) => {
             console.log("Erro: ", err);
         }
 
-
-
 }
 
-module.exports = {landingPage, study, giveClasses, saveClasses}
+module.exports = {
+                  landingPage, 
+                  study, 
+                  giveClasses, 
+                  saveClasses
+
+                }

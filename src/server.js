@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 
@@ -6,7 +5,8 @@ const {
     landingPage, 
     study,
     giveClasses, 
-    saveClasses } = require('./pages')
+    saveClasses
+    } = require('./pages')
 
 /* configurando o nunjucks */
 
@@ -15,7 +15,6 @@ nunjucks.configure('src/views', {
 
     express: app,
     noCache: true,
-    autoescape: false
 
 });
 
@@ -35,6 +34,7 @@ app.get('/study', study);
 
 app.get('/give-classes', giveClasses);
 app.post('/save-classes', saveClasses);
+
 
 const PORT = app.listen(5500);
 
