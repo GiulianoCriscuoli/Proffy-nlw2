@@ -1,4 +1,4 @@
-let timer = 3000;
+let timer = 2000;
 
  setTimeout(() => {
 

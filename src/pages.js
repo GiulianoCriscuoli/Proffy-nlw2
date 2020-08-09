@@ -16,13 +16,19 @@ const landingPage = (req, res) => {
 const study = async(req, res) => {
     const filters = req.query;
 
+    // caso não tenha nada na query, retornará para o study sem os filtros
+
     if(!filters.subject || !filters.weekday || !filters.time) {
         
         return res.render("study.html", {filters, subjects, weekdays});
         
     }
 
-    const timeToMinutes = convertHours(filters.time);    
+    // recebe a conversão das horas em minutos
+
+    const timeToMinutes = convertHours(filters.time); 
+
+    // consulta de join para receber as informações cadastradas no study
 
     const query = `
         SELECT classes.*, proffys.*
@@ -38,7 +44,6 @@ const study = async(req, res) => {
 
 
         )
-
             AND classes.subject = "${filters.subject}"
     
     `
@@ -52,15 +57,15 @@ const study = async(req, res) => {
         const proffys = await db.all(query);
 
         proffys.map((proffy) => {
-            proffy.subject = getSubject(proffy.subject)
+            proffy.subject = getSubject(proffy.subject);
 
         });
 
-        return res.render("study.html", {proffys, filters, subjects, weekdays})
+        return res.render("study.html", {proffys, filters, subjects, weekdays});
 
     } catch(err) {
 
-        console.log("Erro ao conectar", err)
+        console.log("Erro ao conectar", err);
     }
 
     
@@ -118,8 +123,8 @@ const saveClasses = async(req, res) => {
 }
 
 const success = (req, res) => {
-
-    res.render("success.html");
+    filters = req.query;
+    res.render("success.html", {filters});
 }
 
 module.exports = {
