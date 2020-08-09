@@ -61,6 +61,45 @@ textarea {
     margin: 3.2rem 0;
 }
 
+.give-classes {
+    --color1: #00f8cc;
+    color: var(--color1);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .1s ease-in;
+  }
+
+.give-classes:hover {
+    background: var(--color1);
+    box-shadow:
+    0 0 5px var(--color1),
+    0 0 25px var(--color1),
+    0 0 50px var(--color1),
+    0 0 150px var(--color1);
+    color: #fff;
+    transform: translateY(-10px);
+  }
+
+  .study {
+    --color: #dbddd7;
+    color: var(--color-primary-lighter);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .1s ease-in;
+    
+  }
+  
+  .study:hover {
+      background: var(--color-primary-lighter);
+      box-shadow:
+      0 0 5px var(--color),
+      0 0 25px var(--color),
+      0 0 50px var(--color),
+      0 0 150px var(--color);
+      color: #fff;
+      transform: translateY(-10px);
+    }
+
 /* Padrão da fonte para o layout em desktop */
 
 @media (min-width: 700px){

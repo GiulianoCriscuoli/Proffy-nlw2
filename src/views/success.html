@@ -1,21 +1,33 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#8257E5" />
-
-    <link rel="stylesheet" href="/styles/main.css">  
-    <link rel="stylesheet" href="/styles/partials/page-landing.css">          
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
-
     <title>Proffy | Sua plataforma de estudos online</title>
-    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/partials/success.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 </head>
-<body id="page-landing">
 
-    <img class="success-img" src="/images/success-background.svg"/>
-
-        
+<body id="background-success" background="images/success-background.svg">
+    <div id="container">
+        <div class="check-icon">
+            <img src="images/icons/success-check-icon.svg" alt="Sucesso">
+        </div>
+        <div class="message-success">
+            <h2>Cadastro Realizado!</h2>
+            <h3>
+                Você está em nossa lista.<br/>
+                Aguarde pelo whatsapp! =D
+            </h3>
+        </div>
+        <div class="buttons-container">
+            <a id="study" class="study" href="/study?subject={{filters.subject}}&weekday={{filters.weekday}}&time={{filters.time}}">
+            <img src="images/icons/study.svg" alt="Esudar">Acessar lista
+            </a>
+        </div>
+    </div>
+    <script src="scripts/success.js"></script>
 </body>
-</html>
+</html> 

@@ -5,7 +5,8 @@ const {
     landingPage, 
     study,
     giveClasses, 
-    saveClasses
+    saveClasses,
+    success
     } = require('./pages')
 
 /* configurando o nunjucks */
@@ -30,10 +31,14 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/', landingPage );
 
+app.get('/success', success);
+
 app.get('/study', study);
 
 app.get('/give-classes', giveClasses);
 app.post('/save-classes', saveClasses);
+
+
 
 
 const PORT = app.listen(5500);

@@ -103,12 +103,12 @@ const saveClasses = async(req, res) => {
             await createProffy(db, {proffyValue, classValue, classScheduleValues});
 
             let queryString ="?subject=" + req.body.subject;
-            queryString += "&weekday=" + req.body.weekday[0]
-            queryString += "&time=" + req.body.time_from[0]
+            queryString += "&weekday=" + req.body.weekday[0];
+            queryString += "&time=" + req.body.time_from[0];
 
-            
-
-            return res.redirect("/study" + queryString);
+           
+            return res.redirect("/success" + queryString);  
+                       
 
         } catch(err) {
 
@@ -117,10 +117,16 @@ const saveClasses = async(req, res) => {
 
 }
 
+const success = (req, res) => {
+
+    res.render("success.html");
+}
+
 module.exports = {
                   landingPage, 
                   study, 
                   giveClasses, 
-                  saveClasses
+                  saveClasses,
+                  success
 
                 }
