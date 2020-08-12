@@ -50,7 +50,7 @@
     height: 10.4rem;
     border-radius: 0.8rem;
     font: 700 2.4rem Archivo;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -58,6 +58,7 @@
     transition: background 0.2s;
     background: var(--color-secondary);
     margin-right: 1.6rem;
+   
 }
 
 .buttons-container a img{

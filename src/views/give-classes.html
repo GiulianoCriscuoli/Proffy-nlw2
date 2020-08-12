@@ -76,7 +76,7 @@
                     </fieldset>
 
                     <fieldset id="schedule-items">
-                        <div id="warning">Erro! Atingiu o limite de 10 horários =(</div>
+                        <div id="warning">Erro! Atingiu o limite de 5 horários =(</div>
                         <legend>Horários disponíveis 
                             <button type="button" id="add-time">+ Novo Horário</button>
                         </legend>
@@ -98,10 +98,13 @@
                             </div>
                             <div class="input-block">
                                 <label for="time_to">Até</label>
-                                <input type="time" name="time_to[]" required>
+                                <input type="time" name="time_to[]" required>  
                             </div>
-
-                        </div>
+                            <div class="recycle">
+                                <img src="/images/icons/recycle.png" width="32px" height="32px"/>  
+                            </div>
+                            
+                        </div> 
                     </fieldset>
                 </form>   
                 
@@ -117,6 +120,6 @@
             </main>    
         </div> 
 <script src="/scripts/addField.js"></script>
-
+<script src="/scripts/deleteField.js"></script>
 </body>
 </html>
