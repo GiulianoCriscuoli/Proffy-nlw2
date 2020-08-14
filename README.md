@@ -6,6 +6,8 @@
 
 Proffy é uma plataforma de ensino online, focada para quem quer estudar com professores particulares ou para que educadores se cadastrarem para dar aulas. Projeto feito na semana NLW#2, da empresa rocketseat.
 
+ ![](gifs/proffy.gif)
+
 
 # Tecnologias Utilizadas
 

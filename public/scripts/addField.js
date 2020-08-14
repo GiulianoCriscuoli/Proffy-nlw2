@@ -1,5 +1,3 @@
-
-
 // Procurar o botão
 
 const addNewHour = document.querySelector("#add-time");
@@ -36,6 +34,10 @@ function cloneField() {
             warning.style.display = 'block';
             warning.style.transform = 'scale(1)';
         }
+
+       
+
+        
     }
     
 }

@@ -135,6 +135,12 @@
     transition: all .2s ease-in;
 }
 
+.recycle img {
+
+    display: none;
+
+}
+
 
 @media (min-width: 700px) {
     #page-give-classes #container {
